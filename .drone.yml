@@ -1,13 +1,8 @@
 kind: pipeline
-name: default
+name: pipeline-ci-cd
 
 steps:
-- name: install
-  image: node:16
-  commands:
-  - npm install 
-
-- name: test
-  image: node:16
-  commands:
-  - ls -la node_modules
+  - name: hugo
+    image: debian
+    commands:
+      - echo "coucou"
