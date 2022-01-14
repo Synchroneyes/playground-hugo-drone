@@ -4,7 +4,7 @@ type: hugo
 name: pipeline-ci-cd
 
 steps:
-  - name: Helloworld
-    image: busybox
+  - name: hugo
+    image: peaceiris/hugo:v0.78.2-mod
     commands:
-      - echo "${DRONE_COMMIT_AUTHOR} - Run CI/CD pipeline on drone"
+      - hugo
