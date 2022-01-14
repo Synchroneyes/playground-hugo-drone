@@ -1,9 +1,13 @@
 kind: pipeline
-type: hugo
-name: pipeline-ci-cd
+name: default
 
 steps:
-  - name: hugo
-    image: peaceiris/hugo:v0.78.2-mod
-    commands:
-      - hugo
+- name: install
+  image: node:16
+  commands:
+  - npm install 
+
+- name: test
+  image: node:16
+  commands:
+  - ls -la node_modules
