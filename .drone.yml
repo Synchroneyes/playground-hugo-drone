@@ -1,0 +1,10 @@
+---
+kind: pipeline
+type: hugo
+name: pipeline-ci-cd
+
+steps:
+  - name: Helloworld
+    image: busybox
+    commands:
+      - echo "${DRONE_COMMIT_AUTHOR} - Run CI/CD pipeline on drone"
